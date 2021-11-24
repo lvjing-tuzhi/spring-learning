@@ -2,11 +2,17 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-03-dl" />
+        <module name="spring-05-annotate" />
+        <module name="spring-06-javaApplication" />
         <module name="spring-01-ioc1" />
+        <module name="spring-02-hello" />
+        <module name="spring-04-Autowired" />
       </profile>
     </annotationProcessing>
   </component>

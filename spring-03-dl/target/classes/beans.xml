@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="adress" class="com.tuzhi.pojo.Address"/>
+
+    <bean id="student" class="com.tuzhi.pojo.Student" scope="prototype">
+        <!--   普通值注入，value-->
+        <property name="name" value="吕静"/>
+        <!--    对象注入-->
+        <property name="address" ref="adress"></property>
+<!--        数组注入-->
+        <property name="books">
+            <array>
+                <value>aArray</value>
+                <value>bArray</value>
+            </array>
+        </property>
+<!--        List依赖-->
+        <property name="hobby">
+            <list>
+                <value>oneList</value>
+                <value>twoList</value>
+            </list>
+        </property>
+<!--        Map依赖-->
+        <property name="card">
+            <map>
+                <entry key="1" value="one"/>
+                <entry key="2" value="Two"/>
+            </map>
+        </property>
+<!--        Set依赖-->
+        <property name="games">
+            <set>
+                <value>aSet</value>
+                <value>bSet</value>
+            </set>
+        </property>
+<!--        注入空null-->
+        <property name="wife">
+            <null></null>
+        </property>
+<!--        属性注入-->
+        <property name="info">
+            <props>
+                <prop key="drive">com</prop>
+                <prop key="url">127.0.0.1</prop>
+                <prop key="username">root</prop>
+                <prop key="password">root</prop>
+            </props>
+        </property>
+    </bean>
+
+
+
+
+
+</beans>
