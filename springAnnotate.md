@@ -35,4 +35,8 @@
 * @Bean：相当于bean放在方法上
 * @ComponentScan:包扫描等价于<context:component-scan base-package="com.tuzhi"/>
 * @Import():相当于xml的导入
+* @Aspect开启切片
+* @Before("execution()")：设置前置前片插入点
+* @After("execution()")：设置后置前片插入点
+* @Around("execution()"):环绕切点
 

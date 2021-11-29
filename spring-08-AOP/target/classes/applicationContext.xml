@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd
+        ">
+
+    <bean id="userService" class="com.tuzhi.service.UserServiceImpl"/>
+    <bean id="beforeLog" class="com.tuzhi.log.BeforeLog"/>
+    <bean id="afterLog" class="com.tuzhi.log.AfterLog"/>
+
+<!--    AOP实现方式一，使用springapi，实现接口-->
+<!--    配置AOP-->
+<!--    <aop:config>-->
+<!--&lt;!&ndash;        切入点 expression切入点表达式，要切入点位置  &ndash;&gt;-->
+<!--        <aop:pointcut id="pointcut" expression="execution(* com.tuzhi.service.UserServiceImpl.*(..))"/>-->
+
+<!--&lt;!&ndash;        执行环绕增强&ndash;&gt;-->
+<!--        <aop:advisor advice-ref="beforeLog" pointcut-ref="pointcut"/>-->
+<!--        <aop:advisor advice-ref="afterLog" pointcut-ref="pointcut"/>-->
+
+<!--    </aop:config>-->
+    
+<!--    AOP实现方式二，使用自定义-->
+<!--    <bean id="diy" class="com.tuzhi.diy.DiyPointCut"/>-->
+<!--    <aop:config>-->
+<!--        <aop:pointcut id="pointcut" expression="execution(* com.tuzhi.service.UserServiceImpl.*(..))"/>-->
+<!--        <aop:aspect ref="diy">-->
+<!--            <aop:before method="before" pointcut-ref="pointcut"/>-->
+<!--            <aop:after method="after" pointcut-ref="pointcut"/>-->
+<!--        </aop:aspect>-->
+<!--    </aop:config>-->
+
+<!--    AOP实现方式三，使用注解-->
+<!--    注册bean-->
+    <bean id="annotationPoingtCut" class="com.tuzhi.diy.AnnotationPointCut"/>
+<!--    开启注解支持-->
+    <aop:aspectj-autoproxy/>
+
+</beans>

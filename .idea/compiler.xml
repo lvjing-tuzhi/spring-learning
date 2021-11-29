@@ -7,13 +7,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-03-dl" />
-        <module name="spring-05-annotate" />
+        <module name="spring-08-trendsProxy" />
         <module name="spring-06-javaApplication" />
+        <module name="spring-04-Autowired" />
+        <module name="spring-03-dl" />
+        <module name="spring-07-proxy" />
+        <module name="spring-10-transaction" />
+        <module name="spring-08-AOP" />
+        <module name="spring-05-annotate" />
         <module name="spring-01-ioc1" />
         <module name="spring-02-hello" />
-        <module name="spring-04-Autowired" />
+        <module name="spring-09-mybatis" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-07-staticProxy" target="8" />
+      <module name="spring-08-trendsProxy" target="8" />
+      <module name="spring-10-transaction (1)" target="8" />
+      <module name="spring-11-test" target="8" />
+      <module name="spring-11-test-transaction" target="8" />
+      <module name="untitled" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -15,6 +15,11 @@
         <module>spring-04-Autowired</module>
         <module>spring-05-annotate</module>
         <module>spring-06-javaApplication</module>
+        <module>spring-07-proxy</module>
+        <module>spring-08-AOP</module>
+        <module>spring-09-mybatis</module>
+        <module>spring-10-transaction</module>
+        <module>spring-11-test</module>
     </modules>
 
     <dependencies>
@@ -33,6 +38,24 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.22</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.6</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.6.11</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
         </dependency>
     </dependencies>
 
